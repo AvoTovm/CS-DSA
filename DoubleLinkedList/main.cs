@@ -14,14 +14,14 @@ namespace DoubleLinkedList
             list.AddLast(2);
             list.AddAtPos(8, 2);
 
-            Console.WriteLine("list traverse ");
+            Console.WriteLine("list traverse ");            //-> 2 1 8 4 2        
             list.Traverse();
 
             list.RemoveAtBegin();
             list.RemoveAtEnd();
             list.RemoveAtPos(2);
 
-            Console.WriteLine("list aftert remove");    // 1
+            Console.WriteLine("list aftert remove");        //-> 1 4
             list.Traverse();
         }
     }
