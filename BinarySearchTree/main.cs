@@ -19,6 +19,9 @@ namespace BinarySearchTree
             Console.WriteLine("after removing 5 ");
             tree.LevelOrderTraverse();
 
+            Console.WriteLine("Searching");
+            tree.Search(2);
+
             Console.WriteLine("Inorder ");
             tree.InorderTraversal();
 

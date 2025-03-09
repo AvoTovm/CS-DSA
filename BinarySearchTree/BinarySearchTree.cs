@@ -139,7 +139,7 @@ namespace BinarySearchTree
 
             else if(curr.left == null || curr.right == null)
             {
-                TreeNode child = (curr.left != null) ? curr.left : curr.right;
+                TreeNode child = curr.left ?? curr.right;
 
                 if(curr == root) root = null;
                 else if(parent.left == curr) 
@@ -176,6 +176,31 @@ namespace BinarySearchTree
                     succsessorParent.right = succsessor.right;
                 }
             }
+        }
+
+        public void Search(int value)
+        {
+            TreeNode curr = root;
+
+            int steps = 0;
+
+            while(curr != null)
+            {
+                if(curr.value == value)
+                {
+                    Console.WriteLine("The " + value + " found in " + steps + " steps");
+                    return;
+                }else if(curr.value > value)
+                {
+                    curr = curr.left;
+                }
+                else
+                {
+                    curr = curr.right;
+                }
+                steps++;
+            }
+
         }
     }
 }
